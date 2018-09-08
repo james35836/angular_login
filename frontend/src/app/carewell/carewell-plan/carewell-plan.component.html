@@ -1,0 +1,570 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header clearfix mt15 mb20">
+				<div class="left">
+					<h4 class=" text-header">Coverage Plan</h4>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="page-content">
+		<div class="form-container">
+			<!-- TITLE GROUP -->
+			<div class="title-group">
+				<div class="clearfix">
+					<div class="pull-right">
+						<!-- BUTTON GROUP -->
+						<div class="button-group">
+					
+							<button class="btn btn-secondary" type="button" (click)="create_plan()"><i class="fas fa-plus-o"></i> CREATE PLAN</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- FILTER AND SEARCH GROUP -->
+			<div class="filter-search-group">
+				<div class="row">
+					<div class="col-md-6">
+						<select class="form-control form-control-sm">
+							<option>All Genealogy Type</option>
+						</select>
+						<select class="form-control form-control-sm">
+							<option>All Trigger</option>
+						</select>
+					</div>
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control form-control-sm pull-right" placeholder="Search computation plan" name="">
+					</div>
+				</div>
+			</div>
+			<!-- TABLE CONTENT -->
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover table-sm">
+					<thead>
+						<tr>
+							<th class="text-center">Coverage Plan Name</th>
+							<th class="text-center">fsadfsdaf</th>
+							<th class="text-center">fsdafsdf</th>
+							<th class="text-center">fsdfsdafsad</th>
+							<th class="text-center">Premium</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-toggle="modal" data-target="#editProduct">
+							<td class="text-center">PLAN 007</td>
+							<td class="text-center">;klj;kl;</td>
+							<td class="text-center">safdsdgdfg</td>
+							<td class="text-center">hfghfghfghfg</td>
+							<td class="text-center"><span class="green">ACTIVE</span></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<!-- POPUP - CREATE PLAN -->
+<div class="modal fade" id="createPlanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<form (ngSubmit)="create_plan_submit()" #planForm="ngForm">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-drivers-license-o"></i>CREATE PLAN</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Coverage Plan Name</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					
+						<div class="form-group col-md-6">
+							<label><b>Monthly Premium</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Age Bracket</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					
+						<div class="form-group col-md-6">
+							<label><b>Case Handling Fee</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Processing Fee</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					
+						<div class="form-group col-md-6">
+							<label><b>Card Fee</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>HIB</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					
+						<div class="form-group col-md-6">
+							<label><b>Pre-existing</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Annual Benefit Limit</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					
+						<div class="form-group col-md-6">
+							<label><b>Maximum Benefit Limit</b></label>
+							<input type="text" class="form-control form-control-sm" name="none">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						</div>
+					
+						<div class="form-group col-md-6 col-md-offset-6">
+							<input type="radio" name="is_per_year"><b>Per Year</b>
+							<input type="radio" name="is_per_year"><b>Per Illness/Disease/Year</b>
+						</div>
+					</div>
+					
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<button class="btn btn-primary" data-toggle="modal" data-target="#addPlanItem">
+								add item
+							</button>
+							
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+					<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> SUBMIT</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- POPUP - SETTINGS COMPLAN -->
+<div class="modal fade big-popup-with-tab" id="addPlanItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-shopping-cart"></i> Complan Settings</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label><b>Charges </b></label>
+						<input type="text" class="form-control form-control-sm" name="none">
+					</div>
+					<div class="form-group col-md-4">
+						<label><b>Amount Covered</b></label>
+						<input type="text" class="form-control form-control-sm" name="none">
+					</div>
+					<div class="form-group col-md-4">
+						<label><b>Limit</b></label>
+						<input type="text" class="form-control form-control-sm" name="none">
+					</div>
+				</div>
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link plan-tab active" id="laboratory-tab" data-toggle="tab" href="#laboratory" role="tab" aria-controls="laboratory" aria-selected="true">Laboratory</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="complex-tab" data-toggle="tab" href="#complex" role="tab" aria-controls="complex" aria-selected="true">Complex</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="cardio-tab" data-toggle="tab" href="#cardio" role="tab" aria-controls="cardio" aria-selected="true">Cardio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="ctscan-tab" data-toggle="tab" href="#ctscan" role="tab" aria-controls="ctscan" aria-selected="true">CTSCAN</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="icu-tab" data-toggle="tab" href="#icu" role="tab" aria-controls="icu" aria-selected="true">ICU/NICU</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="utz-tab" data-toggle="tab" href="#utz" role="tab" aria-controls="utz" aria-selected="true">UTZ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="xray-tab" data-toggle="tab" href="#xray" role="tab" aria-controls="xray" aria-selected="true">XRAY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="dental-tab" data-toggle="tab" href="#dental" role="tab" aria-controls="dental" aria-selected="true">DENTAL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="basic5-tab" data-toggle="tab" href="#basic5" role="tab" aria-controls="basic5" aria-selected="true">BASIC 5</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link plan-tab" id="executive-tab" data-toggle="tab" href="#executive" role="tab" aria-controls="executive" aria-selected="true">EXECUTIVE</a>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="laboratory" role="tabpanel" aria-labelledby="laboratory-tab">
+						<div class="group-title">fhfdghdfg Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="complex" role="tabpanel" aria-labelledby="complex-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="cardio" role="tabpanel" aria-labelledby="cardio-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="ctscan" role="tabpanel" aria-labelledby="ctscan-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="icu" role="tabpanel" aria-labelledby="icu-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="utz" role="tabpanel" aria-labelledby="utz-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="xray" role="tabpanel" aria-labelledby="xray-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="dental" role="tabpanel" aria-labelledby="dental-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="basic5" role="tabpanel" aria-labelledby="basic5-tab">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="executive" role="tabpanel" aria-labelledby="executive">
+						<div class="group-title">Laboratory Procedures</div>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<div class="table-group">
+									<div class="table-responsive">
+										<table class="table table-bordered table-hover table-sm" style="table-layout: fixed">
+											<thead>
+												
+												<tr>
+													<th class="text-center" ><input type="checkbox"></th>
+													<th class="text-center">Procedure Name</th>
+													<th class="text-center">Amount Limit</th>
+												</tr>
+											</thead>
+											<tbody >
+												<tr *ngFor="let membership of membership_list;">
+													<td class="text-center valign-middle">fghfghfghfg</td>
+													<td >
+														<input type="text" class="form-control no-negative form-control-sm text-center" name="none">
+													</td>
+													<td >hgfghfg</td>
+													<td >hfghfg</td>
+													<td >hfghfgh</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-md-8">
+						
+					</div>
+					<div class="col-md-4 col-md-offset-8">
+						<div class="button-container clearfix text-right">
+							<button type="button" class="btn btn-secondary"><i class="fas fa-times"></i> Close</button>
+							<button type="button" class="btn btn-primary"><i class="fas fa-check"></i> Save Plan</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -36,6 +36,7 @@ import { UserRegisterComponent } from './front/user-register/user-register.compo
 import { CarewellLayoutComponent } from './carewell/carewell-layout/carewell-layout.component';
 import { CarewellDashboardComponent } from './carewell/carewell-dashboard/carewell-dashboard.component';
 import { CarewellProfileComponent } from './carewell/carewell-profile/carewell-profile.component';
+import { CarewellPlanComponent } from './carewell/carewell-plan/carewell-plan.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -68,7 +69,8 @@ export function getAuthServiceConfigs() {
    
     CarewellLayoutComponent,
     CarewellDashboardComponent,
-    CarewellProfileComponent
+    CarewellProfileComponent,
+    CarewellPlanComponent
   ],
   imports: [
     HttpClientModule,

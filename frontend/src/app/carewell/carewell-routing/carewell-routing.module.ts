@@ -7,11 +7,13 @@ import { CarewellDashboardComponent } from '../carewell-dashboard/carewell-dashb
 
 
 import { CarewellLayoutComponent } from '../carewell-layout/carewell-layout.component';
+import { CarewellPlanComponent } from '../carewell-plan/carewell-plan.component';
 
 const routes: Routes = [
   { path: '', component: CarewellLayoutComponent, children: [
   	{ path: 'admin', component: CarewellDashboardComponent },
   	{ path: 'admin/dashboard', component: CarewellDashboardComponent },
+  	{ path: 'admin/plan', component: CarewellPlanComponent },
   	] },
  
 ];
