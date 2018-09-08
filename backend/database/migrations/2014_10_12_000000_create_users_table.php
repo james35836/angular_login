@@ -23,9 +23,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('contact')->nullable();
             $table->string('type')->default('member');
-            $table->integer('country_id')->nullable()->unsigned();
-            $table->string('social_id')->nullable();
-            $table->string('registration_platform')->default('system');
             $table->text('crypt');
             $table->rememberToken();
             $table->timestamps();

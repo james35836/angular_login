@@ -1,0 +1,193 @@
+<div class="side-nav d-none">
+	<nav class="pushmenu pushmenu-left">
+		<a href="javascript:">
+			<div class="profile-img-container">
+				<div class="row-no-padding clearfix">
+					<div class="col-xs-12">
+						<div class="profile-img">
+							<img src="../../../assets/front/img/boy.svg" width="16">
+						</div>
+						<div class="text-holder">
+							<div class="name-text text-overflow" *ngIf="user">{{ user.name }}</div>
+							<div class="subtext text-overflow"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<ul class="links">
+			
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/cash-in" routerLinkActive="active">
+				<i class="fa fa-bank"></i> dsfgdsfg</a>
+			</li>
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/cash-out" routerLinkActive="active">
+				<i class="fa fa-money"></i> gdsfgdsfg</a>
+			</li>
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/codevault" routerLinkActive="active">
+				<i class="fa fa-key"></i> gsdfgsdfg</a>
+			</li>
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/earning" routerLinkActive="active">
+				<i class="fa fa-credit-card"></i> gdsfg</a>
+			</li>
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/genealogy" routerLinkActive="active">
+				<i class="fa fa-cubes"></i>gdfgsdfg</a>
+			</li>
+		</ul>
+		<ul class="links pt-3">
+			<li>
+				<a (click)="sideNavOff()" routerLink="/member/settings">Account Settings</a>
+			</li>
+			<li>
+				<a (click)="onLogout()">Logout</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<div class="header hidden d-flex flex-wrap">
+	<div class="right">
+		<div class="name-container">
+			<div class="name" *ngIf="user">{{ user.name }}</div>
+			<div class="dropdown-arrow">
+				<i class="fa fa-caret-down"></i>
+			</div>
+			<div class="dropdown">
+				<div class="dropdown-container">
+					<div (click)="hideDropdown()" routerLink="/member/settings" class="menu">Account Settings</div>
+					<div (click)="onLogout()" class="menu top-divide">Logouts</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sidebar small">
+	<div class="nav-logo">
+		<div class="nav-logo-container">
+			<div class="logo-holder">
+				<a ><i class="fas fa-stethoscope"></i></a>
+			</div>
+			<div class="company-name">
+				<a >
+					CAREWELL
+				</a>
+			</div>
+		</div>
+		
+	</div>
+	<div class="profile-holder active justify-content-center align-items-center">
+		<div class="profile">
+			<div class="img">
+				<a href="#">
+					<img id="img" class="img-user" src="https://yt3.ggpht.com/-gyCogREfZMA/AAAAAAAAAAI/AAAAAAAAAAA/u0i8rONKiXc/s48-c-k-no-mo-rj-c0xffffff/photo.jpg">
+				</a>
+			</div>
+			<div class="text">
+				<div class="name">James Omosora</div>
+				<div class="sub">jamesomosora@gmail.com</div>
+			</div>
+		</div>
+	</div>
+	<div class="side-nav">
+		<ul>
+			<li class="">
+				<a [routerLink]="['/carewell/dashboard']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-tachometer-alt"></i></div><span>DASHBOARD</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/directory']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-users"></i></div><span>SETTINGS</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/directory']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-users"></i></div><span>COVERAGER PLAN</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/chat']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="far fa-comments"></i></div><span>COMPANY CENTER</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/timeline']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-user-ninja"></i></div><span>MEMBER CENTER</span>
+					</div>
+				</a>
+			</li>
+		
+			<li class="">
+				<a [routerLink]="['/carewell/dashboard']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-tachometer-alt"></i></div><span>BILLING CENTER</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/directory']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-users"></i></div><span>AVAILMENT CENTER</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/chat']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="far fa-comments"></i></div><span>PAYABLE CENTER</span>
+					</div>
+				</a>
+			</li>
+			<li class="">
+				<a [routerLink]="['/carewell/timeline']" href="javascript:void(0)">
+					<div class="nav-holder">
+						<div class="icon"><i class="fas fa-user-ninja"></i></div><span>REPORTS</span>
+					</div>
+				</a>
+			</li>
+			
+
+		</ul>
+	</div>
+</div>
+
+
+<main>
+
+	<router-outlet></router-outlet>
+</main>
+<div class="footer">
+	<div class="clearfix">
+		<div class="row">
+			<div class="col-md-3 text-left"><div class="copyright">&copy; 2018 james Omosora</div></div>
+			<div class="col-md-6 text-center">
+				<div class="footer-nav">
+					<a class="nav" href="">About</a> <span class="divider">&#8226;</span>
+					<a class="nav" href="">Carrers</a> <span class="divider">&#8226;</span>
+					<a class="nav" href="">Tems</a> <span class="divider">&#8226;</span>
+					<a class="nav" href="">Privacy</a> <span class="divider">&#8226;</span>
+					<a class="nav" href="">Press</a>
+				</div>
+			</div>
+			<div class="col-md-3 text-right">
+				<div class="social-media-links">
+					<a class="nav" href=""><i class="fab fa-facebook-square"></i></a>
+					<a class="nav" href=""><i class="fab fa-twitter-square"></i></a>
+					<a class="nav" href=""><i class="fab fa-linkedin"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,65 @@
+.user-profile-page
+{
+    .profile-container
+    {
+        img
+        {
+            width: 100%;
+            display: block;
+            height: 250px;
+            border-radius: 100%;
+        }
+        .file-upload 
+        {
+            display: none !important;
+        }
+        .upload-button
+        {
+            margin: 10px 0px 10px 0px;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background: #1c2d98;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            text-decoration:none;
+            
+             &:hover
+             {
+                opacity: 0.7;
+             }
+        }
+    }
+    .button-group
+    {
+
+    }
+    .user-profile-details
+    {
+        padding:10px;
+        // border-bottom:2px solid #464646;
+        .label
+        {
+            display: inline-block;
+            color: #464646;
+            font-weight: bold;
+            padding: 4px 20px 4px 3px;
+        }
+        .value
+        {
+            display: inline-block;
+            color: #464646;
+            font-weight: bold;
+            padding: 4px 20px 4px 3px;
+        }
+    }
+
+}
+
+
+
+

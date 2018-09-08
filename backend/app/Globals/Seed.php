@@ -9,7 +9,7 @@ class Seed
 {
 	public static function initial_seed()
 	{
-		Seed::country_seed();
+		
 		
 		Seed::admin_seed();
 		
@@ -21,23 +21,7 @@ class Seed
 
 		return $return;
 	}
-	public static function country_seed()
-	{
-		$country  = ['Philippines','Japan','USA'];
-		$currency = ['PHP'        ,'JPY'  ,'USD'];
-		foreach($country as $key => $value)
-		{
-			$insert["country_name"]  = $value;
-			$insert["currency_code"] = $currency[$key];
-			$check = DB::table("tbl_country")->where("country_name",$value)->first();
-			
-			if(!$check)
-			{
-				DB::table("tbl_country")->insert($insert);
-			}	
-		}
-	}
-
+	
 	
 	
 
@@ -59,8 +43,7 @@ class Seed
 			$insert_admin["crypt"]			= Crypt::encryptString("habagat");	
 			$insert_admin["first_name"]		= "";		
 			$insert_admin["last_name"]		= "";		
-			$insert_admin["contact"]		= "";		
-			$insert_admin["country_id"]		= 0;	
+			$insert_admin["contact"]		= "";	
 
 			DB::table("users")->insert($insert_admin);	
 

@@ -19,12 +19,12 @@ export class FrontLayoutComponent implements OnInit, OnDestroy
 	{
 		new WOW().init();
 
-		$('.nav-link').on('click',function() 
+		$('body').on('click',function() 
 		{
 		  	$('.navbar-collapse').collapse('hide');
 		});
 
-		// $('body').addClass('bg-front');
+		
 	}
 
 	ngOnDestroy()

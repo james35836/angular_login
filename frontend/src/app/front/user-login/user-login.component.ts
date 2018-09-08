@@ -25,6 +25,7 @@ export class UserLoginComponent implements OnInit
 	password = null;
 	headers = null;
 	data: any;
+	schol_year_list :any = null;
 
 	constructor(private socialAuthService: AuthService, private userService: UserService, private router: Router, private http: HttpClient) 
 	{
@@ -38,6 +39,7 @@ export class UserLoginComponent implements OnInit
 	{
 		
 	}
+	
 
 	ngOnDestroy()
 	{
@@ -140,7 +142,7 @@ export class UserLoginComponent implements OnInit
 							else if (user_data["type"] == "member") 
 							{
 								localStorage.setItem('type', 'member');
-								this.router.navigate(['/member/dashboard']);
+								this.router.navigate(['/admin/dashboard']);
 							}
 							else
 							{

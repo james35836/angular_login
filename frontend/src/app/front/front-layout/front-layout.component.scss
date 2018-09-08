@@ -23,12 +23,26 @@ nav
     font-weight: bold !important;
     background-color: #77b8fd !important;
 }
+main
+{
+    margin-top:95px;
+}
 
 footer
 {
     color: #ffff !important;
-}
-footer ul li.list-unstyled a
-{
-    clolor: red !important;
+    ul
+    {
+        li
+        {
+            a.social-link
+            {
+                color: red !important;
+            }
+        }
+    }
+    .social-buttons
+    {
+        font-size:30px;
+    }
 }
